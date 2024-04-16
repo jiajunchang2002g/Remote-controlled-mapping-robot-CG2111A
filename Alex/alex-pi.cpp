@@ -179,6 +179,12 @@ void *receiveThread(void *p)
 	}
 }
 
+void setParams(TPacket *commandPacket, char command, int magnitude, int power)
+{
+	commandPacket->params[0] = magnitude;
+	commandPacket->params[1] = power;
+}
+
 void flushInput()
 {
 	char c;
@@ -191,19 +197,6 @@ void getParams(TPacket *commandPacket, char command)
 	printf("Enter distance/angle in cm/degrees (e.g. 50) and power in %% (e.g. 75) separated by space.\n");
 	printf("E.g. 50 75 means go at 50 cm at 75%% power for forward/backward, or 50 degrees left or right turn at 75%%  power\n");
 	scanf("%d %d", &commandPacket->params[0], &commandPacket->params[1]);
-    /*
-	if (command == 'a' || command == 'A' || command == 'd' || command == 'D')
-	{
-		scanf("%d", &commandPacket->params[0]);
-		commandPacket->params[1] = 100;
-	}
-	else
-	{
-		commandPacket->params[0] = 5;
-		commandPacket->params[1] = 100;
-	}
-	flushInput();
-    */
 }
 
 void sendCommand(char command)
@@ -215,29 +208,38 @@ void sendCommand(char command)
 	switch(command)
 	{
 		case 'w':
+			setParams(&commandPacket, command, 30, 100);
+			commandPacket.command = COMMAND_FORWARD;
+			sendPacket(&commandPacket);
+			break;
 		case 'W':
-			getParams(&commandPacket, command);
+			setParams(&commandPacket, command, 20, 100);
 			commandPacket.command = COMMAND_FORWARD;
 			sendPacket(&commandPacket);
 			break;
 
 		case 's':
+			setParams(&commandPacket, command, 30, 100);
+			commandPacket.command = COMMAND_REVERSE;
+			sendPacket(&commandPacket);
+			break;
+		
 		case 'S':
-			getParams(&commandPacket, command);
+			setParams(&commandPacket, command, 20, 100);
 			commandPacket.command = COMMAND_REVERSE;
 			sendPacket(&commandPacket);
 			break;
 
 		case 'a':
 		case 'A':
-			getParams(&commandPacket, command);
+			setParams(&commandPacket, command, 30, 100);
 			commandPacket.command = COMMAND_TURN_LEFT;
 			sendPacket(&commandPacket);
 			break;
 
 		case 'd':
 		case 'D':
-			getParams(&commandPacket, command);
+			setParams(&commandPacket, command, 30, 100);
 			commandPacket.command = COMMAND_TURN_RIGHT;
 			sendPacket(&commandPacket);
 			break;
