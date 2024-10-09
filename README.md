@@ -1,38 +1,44 @@
-Remote-Controlled Robot with SLAM Mapping
+# Remote-Controlled Robot with SLAM Mapping
 
-This project is part of the Engineering Principles and Practices (CG2111A) course and involves building a non-trivial robot capable of autonomously navigating and mapping its environment using SLAM (Simultaneous Localization and Mapping). The robot is controlled remotely and uses various sensors to traverse and generate a map of the area covered.
+This project is part of the **Engineering Principles and Practices (CG2111A)** course. It involves building a remote-controlled robot capable of mapping its environment using SLAM (Simultaneous Localization and Mapping). The robot uses Raspberry Pi and Arduino microcontrollers, with several sensors for navigation and mapping.
 
-Project Overview
+## Project Overview
 
-The robot is built using a combination of microcontroller boards and sensors that allow it to detect its surroundings, navigate through obstacles, and create a map. The core components of this project include the Raspberry Pi and Arduino boards, which handle the control logic and sensor integration.
+The robot navigates through an area, detects its surroundings using sensors, and creates a real-time map using SLAM. Remote control is achieved securely via TLS, and the system runs on Linux with Robot OS (ROS) managing the control and data communication.
 
-Features:
-SLAM (Simultaneous Localization and Mapping): Enables the robot to map its surroundings as it navigates.
-Color Sensor Integration: Detects environmental features such as color for further analysis.
-Motor Control: Ensures precise movement and direction control during navigation.
-Remote Control Capability: The robot can be remotely controlled through a secure connection.
-Robot OS (ROS) Integration: Provides the framework for robot communication and data handling.
-TLS for Secure Communication: Ensures encrypted data transmission between the robot and the remote controller.
-Linux-based OS: The robot operates on Linux, providing a robust and flexible environment for programming and control.
-Hardware Components
+### Key Features:
+- **SLAM for Mapping**
+- **Color Sensor Detection**
+- **Motorized Movement**
+- **Secure Remote Control via TLS**
+- **Linux-Based Environment (Raspberry Pi OS)**
+- **Robot OS (ROS) Framework**
 
-Microcontroller Boards:
-Raspberry Pi
-Arduino
-Sensors and Peripherals:
-SLAM (LIDAR or Camera)
-Color Sensor
-Motors for movement
-Software Stack
+## Hardware Components
+- **Microcontrollers:**
+  - Raspberry Pi
+  - Arduino
+- **Sensors:**
+  - SLAM (e.g., LIDAR or Camera)
+  - Color Sensor
+  - Motors for movement
 
-Operating System: Linux (Raspberry Pi OS)
-Robot OS (ROS): Used for robot communication, sensor data handling, and control.
-Secure Communication: Implemented using TLS to ensure a secure connection for remote control.
-Unix Commands: Various Unix-based commands are used for system control and task automation.
-Installation and Setup
+## Software Stack
+- **Operating System:** Linux (Raspberry Pi OS)
+- **Robot OS (ROS)**
+- **Secure Communication:** TLS encryption for remote control
+- **Unix Commands for Control**
 
-Prerequisites:
-A working Raspberry Pi running a Linux-based OS.
-Arduino IDE and the necessary libraries for motor and sensor control.
-ROS (Robot Operating System) installed on the Raspberry Pi.
-TLS libraries for securing communication.
+## Setup and Installation
+
+### Prerequisites
+- Raspberry Pi with Linux OS
+- Arduino with necessary libraries
+- ROS installed on the Raspberry Pi
+- TLS for secure communication
+
+### Installation Steps:
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd <repository-directory>
