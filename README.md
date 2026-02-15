@@ -37,8 +37,26 @@ The robot navigates through an area, detects its surroundings using sensors, and
 - ROS installed on the Raspberry Pi
 - TLS for secure communication
 
-### Installation Steps:
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-   cd <repository-directory>
+## Layout
+- Alex/ : Arduino Mega sketch and robot code
+- pi/ : Raspberry Pi host program
+  - pi/src/ : C++ sources
+  - pi/include/ : C/C++ headers
+
+## Build the Pi host program
+From the repository root:
+
+```bash
+make
+```
+
+This builds the `Alex-pi` binary in the repo root.
+
+## Run the Pi host program
+```bash
+./Alex-pi
+```
+
+## Arduino sketch
+Open the sketch in `Alex/` using Arduino IDE or `arduino-cli`.
+The board target in `Alex/sketch.yaml` is `arduino:avr:mega`.
