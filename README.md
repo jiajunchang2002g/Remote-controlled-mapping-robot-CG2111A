@@ -4,7 +4,7 @@ This project is part of the **Engineering Principles and Practices (CG2111A)** c
 
 ## Project Overview
 
-The robot navigates through an area, detects its surroundings using sensors, and creates a real-time map using SLAM. Remote control is achieved securely via TLS, and the system runs on Linux with Robot OS (ROS) managing the control and data communication.
+The robot navigates through an area, detects its surroundings using sensors, and creates a real-time map using SLAM. Remote control is achieved securely via TLS, and the system runs on Linux to manage control and data communication.
 
 ### Key Features:
 - **SLAM for Mapping**
@@ -12,7 +12,6 @@ The robot navigates through an area, detects its surroundings using sensors, and
 - **Motorized Movement**
 - **Secure Remote Control via TLS**
 - **Linux-Based Environment (Raspberry Pi OS)**
-- **Robot OS (ROS) Framework**
 
 ## Hardware Components
 - **Microcontrollers:**
@@ -25,7 +24,6 @@ The robot navigates through an area, detects its surroundings using sensors, and
 
 ## Software Stack
 - **Operating System:** Linux (Raspberry Pi OS)
-- **Robot OS (ROS)**
 - **Secure Communication:** TLS encryption for remote control
 - **Unix Commands for Control**
 
@@ -34,7 +32,6 @@ The robot navigates through an area, detects its surroundings using sensors, and
 ### Prerequisites
 - Raspberry Pi with Linux OS
 - Arduino with necessary libraries
-- ROS installed on the Raspberry Pi
 - TLS for secure communication
 
 ## Layout
