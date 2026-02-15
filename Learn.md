@@ -26,6 +26,3 @@ This project combines a Linux host (Raspberry Pi) and an Arduino MCU to control 
 - Clear partitioning of responsibilities between host orchestration and embedded control.
 - Protocol consistency shared across platforms for integration reliability.
 - Built-in telemetry and status reporting to support testing and verification.
-
-## Notes
-- The README mentions ROS and TLS, but those components are not present in this repository. If they exist elsewhere, they can be documented and mapped to additional outcomes.
