@@ -1,4 +1,4 @@
-# Remote-Controlled Robot with SLAM Mapping
+# Tele-operated Robot with SLAM Mapping
 
 This project is part of the **Engineering Principles and Practices (CG2111A)** course. It involves building a remote-controlled robot capable of mapping its environment using SLAM (Simultaneous Localization and Mapping). The robot uses Raspberry Pi and Arduino microcontrollers, with several sensors for navigation and mapping.
 
